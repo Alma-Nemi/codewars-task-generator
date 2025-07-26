@@ -1,0 +1,18 @@
+[
+  {
+    "id": "53da3dbb4a5168369a0000fe",
+    "slug": "even-or-odd",
+    "level": "8 kyu",
+    "title": {
+      "en": "Even or Odd",
+      "ru": "Даже или странно"
+    },
+    "description": {
+      "en": "~~~if-not:sql,shell",
+      "ru": "~~~ if-not: SQL, Shell"
+    },
+    "path": "8-kyu/even-or-odd.js",
+    "date": "2025-07-26",
+    "link": "https://www.codewars.com/kata/53da3dbb4a5168369a0000fe"
+  }
+]
