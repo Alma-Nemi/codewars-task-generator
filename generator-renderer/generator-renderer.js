@@ -27,3 +27,7 @@ document.getElementById('cleanBtn').addEventListener('click', () => {
 document.getElementById('exitBtn').addEventListener('click', () => {
   window.electronAPI.exitApp();
 });
+
+document.getElementById('openArchiveBtn').addEventListener('click', () => {
+  window.electronAPI.openArchive();
+});

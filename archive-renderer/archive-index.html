@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Codewars Solutions Archive</title>
+	<link rel="stylesheet" href="archive-style.css" />
+</head>
+<body>
+<h1>🗃️ Codewars Solutions Archive</h1>
+<div class="subtitle">Browse your saved Codewars solutions</div>
+
+<div class="filter-container">
+	<label for="filterLevel">Filter by Level:</label>
+	<select id="filterLevel">
+		<option value="all">All Levels</option>
+		<option value="8 kyu">8 kyu</option>
+		<option value="7 kyu">7 kyu</option>
+		<option value="6 kyu">6 kyu</option>
+		<option value="5 kyu">5 kyu</option>
+		<option value="4 kyu">4 kyu</option>
+		<option value="3 kyu">3 kyu</option>
+		<option value="2 kyu">2 kyu</option>
+		<option value="1 kyu">1 kyu</option>
+		<option value="1 dan">1 dan</option>
+		<option value="2 dan">2 dan</option>
+	</select>
+</div>
+
+<div class="button-container">
+	<button id="refreshBtn">🔁 Refresh</button>
+	<button id="backToGenBtn">⬅️ Back to Generator</button>
+	<button id="exitBtn">✖️ Exit</button>
+</div>
+
+
+<div id="totalCount" class="subtitle"></div>
+<div id="archiveContainer"></div>
+
+<footer>
+	by Witch of Code <span class="magic">🪄</span>
+</footer>
+
+<script src="archive-renderer.js"></script>
+
+</body>
+</html>

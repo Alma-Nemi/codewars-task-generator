@@ -24,22 +24,15 @@ function sanitizeTitle(title) {
 	return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
-// --- Новая функция очистки описания ---
+// --- Clean markdown from description ---
 function cleanDescription(desc) {
 	const lines = desc.split('\n');
 	let cleanedLines = [];
 
 	for (let line of lines) {
 		line = line.trim();
-
-		// Пропускаем только строки, начинающиеся с ~~~ (включая условия)
-		if (line.startsWith('~~~')) {
-			continue;
-		}
-
-		if (line.length > 0) {
-			cleanedLines.push(line);
-		}
+		if (line.startsWith('~~~')) continue;
+		if (line.length > 0) cleanedLines.push(line);
 	}
 
 	return cleanedLines.join(' ');
@@ -54,13 +47,7 @@ async function fetchKataInfo(id) {
 
 async function updateMeta(entry) {
 	const metaPath = path.resolve('meta', 'solutions.json');
-	let meta = [];
-	try {
-		meta = safeLoadJSON(metaPath);
-	} catch (err) {
-		console.error('[FAIL] Meta file is damaged.');
-		return;
-	}
+	let meta = safeLoadJSON(metaPath);
 
 	const existingIndex = meta.findIndex(e => e.id === entry.id || e.path === entry.path);
 	if (existingIndex !== -1) {
@@ -75,25 +62,25 @@ async function updateMeta(entry) {
 
 async function generateTask(id, code) {
 	const data = await fetchKataInfo(id);
-	const levelRaw = normalizeLevel(data.rank);
-	const levelMeta = levelRaw.replace(/-/g, ' ');
+	const levelRaw = normalizeLevel(data.rank); // e.g. "8-kyu", "1-dan"
+	const levelMeta = levelRaw.replace(/-/g, ' '); // human readable
 	const slug = sanitizeTitle(data.slug || data.name || id);
 	const titleEN = data.name || 'Unknown Title';
-
-	// Очищаем описание от блоков ~~~
 	const descriptionEN = cleanDescription(data.description || 'No description.');
+	const today = new Date().toISOString().split('T')[0];
 
+	// 🗂 Создаём путь в .solutions/{level}/{slug}.js
 	const baseDir = process.cwd();
-	const levelFolder = path.join(baseDir, levelRaw);
+	const levelFolder = path.join(baseDir, '.solutions', levelRaw);
 	if (!fs.existsSync(levelFolder)) fs.mkdirSync(levelFolder, { recursive: true });
 
-	const today = new Date().toISOString().split('T')[0];
 	const solutionPath = path.join(levelFolder, `${slug}.js`);
+	const relativePath = path.relative(baseDir, solutionPath).replace(/\\/g, '/'); // для Windows совместимости
 
 	const solutionContent = `/**
  * ID: ${id}
- * @link https://www.codewars.com/kata/${id}
- * @date ${today}
+ * @link: https://www.codewars.com/kata/${id}
+ * @date: ${today}
  * @lvl: ${levelMeta}
  * @title: ${titleEN}
  * @description: ${descriptionEN.replace(/\n/g, '\n *   ')}
@@ -113,7 +100,7 @@ ${code}
 		description: {
 			en: descriptionEN.split('\n')[0]
 		},
-		path: `${levelRaw}/${slug}.js`,
+		path: relativePath,
 		date: today,
 		link: `https://www.codewars.com/kata/${id}`
 	});

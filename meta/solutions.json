@@ -9,7 +9,7 @@
     "description": {
       "en": "This code does not execute properly. Try to figure out why."
     },
-    "path": "8-kyu/multiply.js",
+    "path": "solutions/8-kyu/multiply.js",
     "date": "2025-07-26",
     "link": "https://www.codewars.com/kata/50654ddff44f800200000004"
   },
@@ -23,7 +23,7 @@
     "description": {
       "en": "Create a function that takes an integer as an argument and returns `\"Even\"` for even numbers or `\"Odd\"` for odd numbers. You will be given a table `numbers`, with one column `number`.</br> Return a dataset with two columns: `number` and `is_even`, where `number` contains the original input value, and `is_even` containing `\"Even\"` or `\"Odd\"` depending on `number` column values. ### Numbers table schema ```text * number INT ``` ### Output table schema ```text * number  INT * is_even STRING ``` Write a script that takes an integer as an argument and returns `\"Even\"` for even numbers or `\"Odd\"` for odd numbers."
     },
-    "path": "8-kyu/even-or-odd.js",
+    "path": "solutions/8-kyu/even-or-odd.js",
     "date": "2025-07-27",
     "link": "https://www.codewars.com/kata/53da3dbb4a5168369a0000fe"
   },
@@ -37,7 +37,7 @@
     "description": {
       "en": "An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case. **Example: (Input --> Output)** ``` \"Dermatoglyphics\" --> true \"aba\" --> false \"moOse\" --> false (ignore letter case) ``` ``` \"Dermatoglyphics\" -> t \"aba\" -> f \"moOse\" -> f (ignore letter case) ```"
     },
-    "path": "7-kyu/isograms.js",
+    "path": "solutions/7-kyu/isograms.js",
     "date": "2025-07-27",
     "link": "https://www.codewars.com/kata/54ba84be607a92aa900000f1"
   },
@@ -51,7 +51,7 @@
     "description": {
       "en": "In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out. ### Example ```python filter_list([1,2,'a','b']) == [1,2] filter_list([1,'a','b',0,15]) == [1,0,15] filter_list([1,2,'aasf','1','123',123]) == [1,2,123] ``` ```csharp ListFilterer.GetIntegersFromList(new List<object>(){1, 2, \"a\", \"b\"}) => {1, 2} ListFilterer.GetIntegersFromList(new List<object>(){1, \"a\", \"b\", 0, 15}) => {1, 0, 15} ListFilterer.GetIntegersFromList(new List<object>(){1, 2, \"a\", \"b\", \"aasf\", \"1\", \"123\", 123}) => {1, 2, 231} ``` ```factor { 1 2 \"a\" \"b\" } filter-seq ! { 1 2 } { 1 \"a\" \"b\" 0 15 } filter-seq ! { 1 0 15 } { 1 2 \"aasf\" \"1\" \"123\" 123 } filter-seq ! { 1 2 123 } ``` ```java Kata.filterList(List.of(1, 2, \"a\", \"b\")) => List.of(1,2) Kata.filterList(List.of(1, \"a\", \"b\", 0, 15)) => List.of(1,0,15) Kata.filterList(List.of(1, 2, \"a\", \"b\", \"aasf\", \"1\", \"123\", 123)) => List.of(1, 2, 123) ``` ```scala filterList(List(1, 2, \"a\", \"b\")) == List(1, 2) filterList(List(1, \"a\", \"b\", 0, 15)) == List(1, 0, 15) filterList(List(1, 2, \"aasf\", \"1\", \"123\", 123)) == List(1, 2, 123) ``` ```kotlin filterList(ListOf(1, 2, \"a\", \"b\")) == [1, 2] filterList(ListOf(1, \"a\", \"b\", 0, 15)) == [1, 0, 15] filterList(ListOf(1, 2, \"a\", \"b\", \"aasf\", \"1\", \"123\", 123)) == [1, 2, 123] ```"
     },
-    "path": "7-kyu/list-filtering.js",
+    "path": "solutions/7-kyu/list-filtering.js",
     "date": "2025-07-27",
     "link": "https://www.codewars.com/kata/53dbd5315a3c69eed20002dd"
   },
@@ -65,7 +65,7 @@
     "description": {
       "en": "Trolls are attacking your comment section! A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat. Your task is to write a function that takes a string and return a new string with all vowels removed. For example, the string \"This website is for losers LOL!\" would become \"Ths wbst s fr lsrs LL!\". Note: for this kata `y` isn't considered a vowel."
     },
-    "path": "7-kyu/disemvowel-trolls.js",
+    "path": "solutions/7-kyu/disemvowel-trolls.js",
     "date": "2025-07-27",
     "link": "https://www.codewars.com/kata/52fba66badcd10859f00097e"
   }

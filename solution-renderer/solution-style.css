@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+body {
+	margin: 0;
+	font-family: 'Fira Code', monospace;
+	background: radial-gradient(circle at top, #0f0f0f 0%, #0a0a0a 100%);
+	color: #8FFFA7;
+	padding: 2rem 3rem;
+	line-height: 1.6;
+	font-size: 1rem;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	max-width: 100vw;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+header {
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.4rem;
+	color: #8FFFA7;
+	text-shadow: 0 0 8px rgba(143, 255, 167, 0.5), 0 0 16px rgba(143, 255, 167, 0.3);
+	margin-bottom: 0.2rem;
+	animation: glowPulse 3s infinite ease-in-out;
+}
+
+.subtitle {
+	font-size: 1rem;
+	color: #A1FFCE;
+	opacity: 0.8;
+	font-style: italic;
+	margin-bottom: 1rem;
+	animation: flicker 4s infinite alternate;
+}
+
+#solution-header {
+	white-space: pre-wrap;
+	text-align: left;
+	max-width: 700px;
+	margin: 0 auto 1rem auto;
+	padding-left: 0.5rem;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+button {
+	padding: 0.6rem 1.2rem;
+	border-radius: 6px;
+	border: none;
+	background: #111;
+	color: #8FFFA7;
+	font-weight: bold;
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(88, 214, 141, 0.3);
+	transition: background 0.3s ease;
+	font-family: 'Fira Code', monospace;
+	position: relative;
+	overflow: hidden;
+}
+
+#backToArchiveBtn {
+	border: 1px solid #58D68D;
+	box-shadow: 0 0 10px #58D68D;
+}
+
+#backToArchiveBtn::before {
+	content: "";
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	background: linear-gradient(120deg, transparent, #8FFFA7, transparent);
+	animation: pulseBorder 3s linear infinite;
+	opacity: 0.25;
+	pointer-events: none;
+	border-radius: 6px;
+}
+
+#backToArchiveBtn:hover {
+	background: #193327;
+	box-shadow: 0 0 20px #8FFFA7;
+	color: #C1FFD7;
+}
+
+#exitBtn {
+	border: 1px solid #9B59B6;
+	box-shadow: 0 0 10px #9B59B6;
+	background: #2e1a2e;
+	color: #9B59B6;
+}
+
+#exitBtn::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: repeating-conic-gradient(#9B59B6 0deg 10deg, transparent 10deg 20deg);
+	animation: rotateExit 4s linear infinite;
+	opacity: 0.15;
+	pointer-events: none;
+	border-radius: 6px;
+}
+
+#exitBtn:hover {
+	background: #6c4ca0;
+	box-shadow: 0 0 25px #9B59B6;
+	color: #D8BFF9;
+}
+
+main {
+	flex-grow: 1;
+	background-color: #111;
+	border-radius: 12px;
+	padding: 1rem;
+	box-shadow: 0 0 20px #00ff88;
+	overflow-y: auto;
+	white-space: pre-wrap;
+	font-size: 1rem;
+	line-height: 1.4;
+	font-family: 'Fira Code', monospace;
+	color: #00ff88;
+	text-shadow:
+		0 0 5px #00ff88,
+		0 0 10px #00ff88,
+		0 0 20px #00ff88,
+		0 0 30px #0f0,
+		0 0 40px #0f0,
+		0 0 50px #0f0,
+		0 0 60px #0f0;
+}
+
+.matrix-code {
+	background: #001100;
+	padding: 1rem;
+	border-radius: 8px;
+	font-family: 'Fira Code', monospace;
+	color: #33ff77;
+	overflow-x: auto;
+	box-shadow:
+		0 0 6px #33ff77,
+		0 0 14px #33ff77,
+		0 0 22px #22cc55;
+	letter-spacing: 0.07em;
+}
+
+/* Footer styling */
+footer {
+	text-align: center;
+	font-size: 0.9rem;
+	color: #6EE7B7;
+	font-style: italic;
+	font-family: 'Fira Code', monospace;
+	text-shadow: 0 0 6px rgba(110, 231, 183, 0.6), 0 0 10px rgba(110, 231, 183, 0.3);
+	user-select: none;
+	margin-top: 1rem;
+}
+
+footer .magic {
+	margin-left: 0.3rem;
+	animation: sparkle 3s ease-in-out infinite alternate;
+	display: inline-block;
+	transform-origin: center bottom;
+	color: #A78BFA;
+	text-shadow: 0 0 12px #A78BFA;
+}
+
+/* Castom strip of scrolls for Webkit (Chrome, Edge, Safari) */
+
+main::-webkit-scrollbar,
+.matrix-code::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+main::-webkit-scrollbar-track,
+.matrix-code::-webkit-scrollbar-track {
+	background: #0a0a0a;
+	border-radius: 10px;
+	box-shadow: inset 0 0 5px #004400;
+}
+
+main::-webkit-scrollbar-thumb,
+.matrix-code::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, #00ff88, #008844);
+	border-radius: 10px;
+	box-shadow:
+		0 0 8px #00ff88,
+		inset 0 0 6px #00cc66;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+main::-webkit-scrollbar-thumb:hover,
+.matrix-code::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(180deg, #33ffaa, #00cc55);
+	box-shadow:
+		0 0 12px #33ffaa,
+		inset 0 0 10px #00ff88;
+}
+
+/* Scroll strip for Firefox */
+main,
+.matrix-code {
+	scrollbar-width: thin;
+	scrollbar-color: #00ff88 #0a0a0a;
+}
+
+/* Animations (same as provided) */
+
+@keyframes glowPulse {
+	0%, 100% {
+		text-shadow: 0 0 6px rgba(143, 255, 167, 0.4);
+	}
+	50% {
+		text-shadow: 0 0 16px rgba(143, 255, 167, 0.8), 0 0 8px rgba(143, 255, 167, 0.5);
+	}
+}
+
+@keyframes flicker {
+	0% { opacity: 1; }
+	45% { opacity: 0.8; }
+	60% { opacity: 0.6; }
+	80% { opacity: 0.9; }
+	100% { opacity: 1; }
+}
+
+@keyframes pulseBorder {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes rotateExit {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes sparkle {
+	0% {
+		transform: scale(1) rotate(0deg);
+		opacity: 0.7;
+	}
+	50% {
+		transform: scale(1.3) rotate(15deg);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1) rotate(0deg);
+		opacity: 0.7;
+	}
+}

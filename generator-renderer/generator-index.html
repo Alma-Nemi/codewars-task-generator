@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Codewars Task Generator</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="generator-style.css" />
 </head>
 <body>
 <h1>⚙️ Codewars Task Generator</h1>
@@ -19,9 +19,13 @@
   <textarea id="solutionCode" placeholder="// Paste your solution code here..."></textarea>
 
   <div class="buttons-container">
-    <button id="generateBtn">💫 Generate Task</button>
+    <button id="generateBtn">💫 Generate</button>
     <button id="cleanBtn">🧹 Clean</button>
     <button id="exitBtn">✖️ Exit</button>
+  </div>
+
+  <div class="archive-button-wrapper">
+    <button id="openArchiveBtn">🗃️ Open Archive</button>
   </div>
 
   <pre id="output"></pre>
@@ -31,6 +35,6 @@
   by Witch of Code <span class="magic">🪄</span>
 </footer>
 
-<script src="renderer.js"></script>
+<script src="generator-renderer.js"></script>
 </body>
 </html>

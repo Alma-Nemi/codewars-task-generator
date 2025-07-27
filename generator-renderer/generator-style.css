@@ -168,6 +168,50 @@ button {
   color: #D8BFF9;
 }
 
+/* Archive Button */
+
+.archive-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#openArchiveBtn {
+  width: 50%;
+  padding: 0.95rem 1.5rem;
+  border-radius: 6px;
+  font-family: 'Fira Code', monospace;
+  font-weight: bold;
+  background: #2b2200;
+  color: #FFD95A;
+  border: 1px solid #FFD95A;
+  box-shadow: 0 0 12px rgba(255, 217, 90, 0.25);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  animation: glowGold 3.5s ease-in-out infinite;
+}
+
+#openArchiveBtn::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 217, 90, 0.2), transparent 70%);
+  animation: archivePulse 6s infinite ease-in-out;
+  z-index: 0;
+}
+
+#openArchiveBtn:hover {
+  background: #3b2f00;
+  color: #FFF8C6;
+  box-shadow: 0 0 20px #FFD95A, 0 0 10px rgba(255, 217, 90, 0.5);
+  border-color: #FFE377;
+}
+
 /* Output area */
 #output,
 pre#output {
@@ -181,6 +225,28 @@ pre#output {
   font-size: 0.95rem;
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6EE7B7; /* мягкий светло-зеленый */
+  font-style: italic;
+  font-family: 'Fira Code', monospace;
+  text-shadow: 0 0 6px rgba(110, 231, 183, 0.6), 0 0 10px rgba(110, 231, 183, 0.3);
+  user-select: none;
+}
+
+footer .magic {
+  margin-left: 0.3rem;
+  animation: sparkle 3s ease-in-out infinite alternate;
+  display: inline-block;
+  transform-origin: center bottom;
+  color: #A78BFA; /* светлый фиолетовый */
+  text-shadow: 0 0 12px #A78BFA;
 }
 
 /* Animations */
@@ -228,24 +294,28 @@ pre#output {
   }
 }
 
-footer {
-  margin-top: 3rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #6EE7B7; /* мягкий светло-зеленый */
-  font-style: italic;
-  font-family: 'Fira Code', monospace;
-  text-shadow: 0 0 6px rgba(110, 231, 183, 0.6), 0 0 10px rgba(110, 231, 183, 0.3);
-  user-select: none;
+@keyframes glowGold {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 217, 90, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 217, 90, 0.5), 0 0 10px rgba(255, 217, 90, 0.3);
+  }
 }
 
-footer .magic {
-  margin-left: 0.3rem;
-  animation: sparkle 3s ease-in-out infinite alternate;
-  display: inline-block;
-  transform-origin: center bottom;
-  color: #A78BFA; /* светлый фиолетовый */
-  text-shadow: 0 0 12px #A78BFA;
+@keyframes archivePulse {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.15);
+    opacity: 0.4;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.2;
+  }
 }
 
 @keyframes sparkle {
