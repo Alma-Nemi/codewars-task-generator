@@ -37,4 +37,4 @@ Made with 🧠 logic and 🧪 curiosity.
 npm install
 npm start
 ```
-<footer>Crafted with care and a touch of magic<span class="magic">🪄</span></footer>
+<p align="center"><sub>Crafted with care and a touch of magic 🔮 by Witch of Code 🪄</sub></p>
