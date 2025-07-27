@@ -1,7 +1,72 @@
+# -------------------------------
+# 📁 System files
+# -------------------------------
 .DS_Store
-.idea
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# -------------------------------
+# 💻 IDE/editor config folders
+# -------------------------------
+.idea/
+.vscode/
+*.code-workspace
+
+# -------------------------------
+# 📦 Node modules and output
+# -------------------------------
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+
+# -------------------------------
+# ⚙️ Environment & configs
+# -------------------------------
 .env
-dist
-node_modules
+.env.local
+.env.development
+.env.production
+.env.test
+
+# -------------------------------
+# 🧪 Logs & debug
+# -------------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+*.log.*
+
+# -------------------------------
+# 🧊 Electron cache/user data
+# -------------------------------
+user_data/
+*.asar
+*.bak
+*.tmp
+*.temp
+.cache/
+.cache/*
+
+# -------------------------------
+# 🚫 Lock files (optional, uncomment if needed)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# -------------------------------
+# 🔍 Test snapshots & reports
+# -------------------------------
+__snapshots__/
+test-results/
+coverage-final.json
+
+# -------------------------------
+# ✨ App specific (you can customize)
+# -------------------------------
 scripts/temp/
-coverage
+solutions.json.bak

@@ -7,7 +7,6 @@
     "start": "electron ."
   },
   "dependencies": {
-    "@vitalets/google-translate-api": "^9.2.1",
     "electron": "^28.3.3",
     "node-fetch": "^3.3.2"
   }

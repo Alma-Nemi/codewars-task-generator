@@ -1,5 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+app.setPath('userData', path.join(__dirname, 'user_data'));
 const generateTask = require('./scripts/generate-task');
 
 function createWindow() {
@@ -13,6 +14,7 @@ function createWindow() {
   });
 
   win.loadFile('renderer/index.html');
+  win.setMenu(null);
 }
 
 app.whenReady().then(() => {
@@ -33,4 +35,8 @@ ipcMain.handle('generate-task', async (event, { id, code, rawTests }) => {
   } catch (error) {
     return { success: false, error: error.message };
   }
+});
+
+ipcMain.on('app-exit', () => {
+  app.quit();
 });

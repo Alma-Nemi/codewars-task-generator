@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Codewars Task Generator</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🧠 Codewars Task Generator</h1>
-  <label>Kata ID: <input id="kataId" placeholder="e.g., 5265326f5fda8eb1160004c8" /></label>
-  <label>Solution Code:</label>
-  <textarea id="solutionCode" placeholder="function myFunc(...) {...}"></textarea>
-  <label>Raw Tests:</label>
-  <textarea id="rawTests" placeholder="tester(1, 1);"></textarea>
-  <button id="generateBtn">✨ Generate</button>
+<h1>⚙️ Codewars Task Generator</h1>
+<div class="subtitle">✨ Generate and organize your Codewars solutions with a touch of magic! ✨</div>
+
+<div class="form-container">
+  <label for="kataId">Kata ID:</label>
+  <input type="text" id="kataId" placeholder="e.g. 582c297e56373f0426000098" />
+
+  <label for="solutionCode">Solution Code:</label>
+  <textarea id="solutionCode" placeholder="// Paste your solution code here..."></textarea>
+
+  <div class="buttons-container">
+    <button id="generateBtn">💫 Generate Task</button>
+    <button id="cleanBtn">🧹 Clean</button>
+    <button id="exitBtn">✖️ Exit</button>
+  </div>
 
   <pre id="output"></pre>
+</div>
 
-  <script src="renderer.js"></script>
+<footer>
+  by Witch of Code <span class="magic">🪄</span>
+</footer>
+
+<script src="renderer.js"></script>
 </body>
 </html>
