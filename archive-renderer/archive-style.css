@@ -35,9 +35,17 @@ h1 {
 	max-width: 700px;
 	margin: 0 auto 0.5rem auto;
 	display: flex;
+	flex-wrap: wrap;
 	gap: 1rem;
 	align-items: center;
 	justify-content: center;
+}
+
+.filter-container select {
+	flex: 1;
+	min-width: 140px;
+	max-width: 200px;
+	text-align: center;
 }
 
 .button-container {
@@ -46,6 +54,12 @@ h1 {
 	display: flex;
 	gap: 1rem;
 	justify-content: center;
+}
+
+.button-container button {
+	flex: 1;
+	min-width: 140px;
+	text-align: center;
 }
 
 select {

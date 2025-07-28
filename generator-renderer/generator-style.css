@@ -78,6 +78,12 @@ textarea {
   margin-bottom: 2rem;
 }
 
+.buttons-container button {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+
 /* General styles of buttons */
 button {
   padding: 0.9rem 1.8rem;
