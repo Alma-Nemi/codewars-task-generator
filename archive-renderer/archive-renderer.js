@@ -1,5 +1,6 @@
 const archiveContainer = document.getElementById('archiveContainer');
 const filterLevel = document.getElementById('filterLevel');
+const filterDate = document.getElementById('filterDate');
 const refreshBtn = document.getElementById('refreshBtn');
 const exitBtn = document.getElementById('exitBtn');
 const totalCountEl = document.getElementById('totalCount');
@@ -27,6 +28,13 @@ async function loadArchive() {
 			return;
 		}
 
+		const sortOrder = filterDate.value;
+		filtered.sort((a, b) => {
+			const dateA = new Date(a.date);
+			const dateB = new Date(b.date);
+			return sortOrder === 'asc' ? dateA - dateB : dateB - dateA;
+		});
+
 		const levelCounts = allData.reduce((acc, cur) => {
 			acc[cur.level] = (acc[cur.level] || 0) + 1;
 			return acc;
@@ -50,15 +58,15 @@ async function loadArchive() {
 				</tr>
 			</thead>
 			<tbody>
-				${filtered.slice().reverse().map(item => `
+				${filtered.map(item => `
 					<tr>
 						<td>${item.id}</td>
 						<td>${item.title.en}</td>
 						<td>${item.level} (${levelCounts[item.level]})</td>
 						<td>${item.description.en.length > 25 ? item.description.en.slice(0, 25) + '...' : item.description.en}</td>
 						<td class="center-col">
-  <a href="#" title="${item.path}" onclick="window.electronAPI.openSolution('${item.path.replace(/\\/g, '\\\\')}')">🗂️</a>
-</td>
+							<a href="#" title="${item.path}" onclick="window.electronAPI.openSolution('${item.path.replace(/\\/g, '\\\\')}')">🗂️</a>
+						</td>
 						<td>${item.date}</td>
 						<td class="center-col"><a href="${item.link}" target="_blank">🔗</a></td>
 					</tr>
@@ -79,6 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	refreshBtn.addEventListener('click', loadArchive);
 	filterLevel.addEventListener('change', loadArchive);
+	filterDate.addEventListener('change', loadArchive);
 
 	if (exitBtn) {
 		exitBtn.addEventListener('click', () => {
