@@ -69,9 +69,9 @@ async function generateTask(id, code) {
 	const descriptionEN = cleanDescription(data.description || 'No description.');
 	const today = new Date().toISOString().split('T')[0];
 
-	// 🗂 Создаём путь в .solutions/{level}/{slug}.js
+	// 🗂 We create the way to solutions/{level}/{slug}.js
 	const baseDir = process.cwd();
-	const levelFolder = path.join(baseDir, '.solutions', levelRaw);
+	const levelFolder = path.join(baseDir, 'solutions', levelRaw);
 	if (!fs.existsSync(levelFolder)) fs.mkdirSync(levelFolder, { recursive: true });
 
 	const solutionPath = path.join(levelFolder, `${slug}.js`);
