@@ -50,7 +50,7 @@ async function loadArchive() {
 				</tr>
 			</thead>
 			<tbody>
-				${filtered.map(item => `
+				${filtered.slice().reverse().map(item => `
 					<tr>
 						<td>${item.id}</td>
 						<td>${item.title.en}</td>
