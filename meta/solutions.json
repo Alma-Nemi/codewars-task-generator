@@ -68,5 +68,691 @@
     "path": "solutions/7-kyu/disemvowel-trolls.js",
     "date": "2025-07-27",
     "link": "https://www.codewars.com/kata/52fba66badcd10859f00097e"
+  },
+  {
+    "id": "53369039d7ab3ac506000467",
+    "slug": "convert-boolean-values-to-strings-yes-or-no",
+    "level": "8 kyu",
+    "title": {
+      "en": "Convert boolean values to strings 'Yes' or 'No'."
+    },
+    "description": {
+      "en": "Complete the method that takes a boolean value and return a `\"Yes\"` string for `true`, or a `\"No\"` string for `false`."
+    },
+    "path": "solutions/8-kyu/convert-boolean-values-to-strings-yes-or-no.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/53369039d7ab3ac506000467"
+  },
+  {
+    "id": "5715eaedb436cf5606000381",
+    "slug": "sum-of-positive",
+    "level": "8 kyu",
+    "title": {
+      "en": "Sum of positive"
+    },
+    "description": {
+      "en": "### Task You get an array of numbers, return the sum of all of the positives ones. ### Example - `[1, -4, 7, 12]` => `$ 1 + 7 + 12 = 20 $` ### Note If there is nothing to sum, the sum is default to `0`."
+    },
+    "path": "solutions/8-kyu/sum-of-positive.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5715eaedb436cf5606000381"
+  },
+  {
+    "id": "5168bb5dfe9a00b126000018",
+    "slug": "reversed-strings",
+    "level": "8 kyu",
+    "title": {
+      "en": "Reversed Strings"
+    },
+    "description": {
+      "en": "Complete the solution so that it reverses the string passed into it. ``` 'world'  =>  'dlrow' 'word'   =>  'drow' ```"
+    },
+    "path": "solutions/8-kyu/reversed-strings.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5168bb5dfe9a00b126000018"
+  },
+  {
+    "id": "53ee5429ba190077850011d4",
+    "slug": "you-cant-code-under-pressure-number-1",
+    "level": "8 kyu",
+    "title": {
+      "en": "You Can't Code Under Pressure #1"
+    },
+    "description": {
+      "en": "Code as fast as you can! You need to double the integer and return it."
+    },
+    "path": "solutions/8-kyu/you-cant-code-under-pressure-number-1.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/53ee5429ba190077850011d4"
+  },
+  {
+    "id": "54ff3102c1bad923760001f3",
+    "slug": "vowel-count",
+    "level": "7 kyu",
+    "title": {
+      "en": "Vowel Count"
+    },
+    "description": {
+      "en": "Return the number (count) of vowels in the given string. We will consider `a`, `e`, `i`, `o`, `u` as vowels for this Kata (but not `y`). The input string will only consist of lower case letters and/or spaces."
+    },
+    "path": "solutions/7-kyu/vowel-count.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/54ff3102c1bad923760001f3"
+  },
+  {
+    "id": "5467e4d82edf8bbf40000155",
+    "slug": "descending-order",
+    "level": "7 kyu",
+    "title": {
+      "en": "Descending Order"
+    },
+    "description": {
+      "en": "Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number. ### Examples: Input: `42145` Output: `54421` Input: `145263` Output: `654321` Input: `123456789` Output: `987654321`"
+    },
+    "path": "solutions/7-kyu/descending-order.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5467e4d82edf8bbf40000155"
+  },
+  {
+    "id": "54c27a33fb7da0db0100040e",
+    "slug": "youre-a-square",
+    "level": "7 kyu",
+    "title": {
+      "en": "You're a square!"
+    },
+    "description": {
+      "en": "### A square of squares You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks! However, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check if your number of building blocks is a _perfect square_. ### Task Given an integral number, determine if it's a [square number](https://en.wikipedia.org/wiki/Square_number): > In mathematics, a __square number__ or __perfect square__ is an integer that is the square of an integer; in other words, it is the product of some integer with itself. The tests will _always_ use some integral number, so don't worry about that in dynamic typed languages. ### Examples ``` -1  =>  false 0  =>  true 3  =>  false 4  =>  true 25  =>  true 26  =>  false ``` ### Encodings purity: `LetRec` numEncoding: `BinaryScott` ( so no negative numbers ) export deconstructor `if` for your `Boolean` encoding"
+    },
+    "path": "solutions/7-kyu/youre-a-square.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/54c27a33fb7da0db0100040e"
+  },
+  {
+    "id": "54da5a58ea159efa38000836",
+    "slug": "find-the-odd-int",
+    "level": "6 kyu",
+    "title": {
+      "en": "Find the odd int"
+    },
+    "description": {
+      "en": "Given an array of integers, find the one that appears an odd number of times. There will always be only one integer that appears an odd number of times. ### Examples `[7]` should return `7`, because it occurs 1 time (which is odd). `[0]` should return `0`, because it occurs 1 time (which is odd). `[1,1,2]` should return `2`, because it occurs 1 time (which is odd). `[0,1,0,1,0]` should return `0`, because it occurs 3 times (which is odd). `[1,2,2,3,3,3,4,3,3,3,2,2,1]` should return `4`, because it appears 1 time (which is odd)."
+    },
+    "path": "solutions/6-kyu/find-the-odd-int.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/54da5a58ea159efa38000836"
+  },
+  {
+    "id": "54b42f9314d9229fd6000d9c",
+    "slug": "duplicate-encoder",
+    "level": "6 kyu",
+    "title": {
+      "en": "Duplicate Encoder"
+    },
+    "description": {
+      "en": "The goal of this exercise is to convert a string to a new string where each character in the new string is `\"(\"` if that character appears only once in the original string, or `\")\"` if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate. ### Examples ``` \"din\"      =>  \"(((\" \"recede\"   =>  \"()()()\" \"Success\"  =>  \")())())\" \"(( @\"     =>  \"))((\" ``` ### Notes Assertion messages may be unclear about what they display in some languages. If you read `\"...It Should encode XXX\"`, the `\"XXX\"` is the expected result, not the input!"
+    },
+    "path": "solutions/6-kyu/duplicate-encoder.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/54b42f9314d9229fd6000d9c"
+  },
+  {
+    "id": "52597aa56021e91c93000cb0",
+    "slug": "moving-zeros-to-the-end",
+    "level": "5 kyu",
+    "title": {
+      "en": "Moving Zeros To The End"
+    },
+    "description": {
+      "en": "Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements. ```php moveZeros([false,1,0,1,2,0,1,3,\"a\"]) // returns[false,1,1,2,1,3,\"a\",0,0] ``` ```javascript moveZeros([false,1,0,1,2,0,1,3,\"a\"]) // returns[false,1,1,2,1,3,\"a\",0,0] ``` ```python move_zeros([1, 0, 1, 2, 0, 1, 3]) # returns [1, 1, 2, 1, 3, 0, 0] ``` ```cpp move_zeros({1, 0, 1, 2, 0, 1, 3}) // returns {1, 1, 2, 1, 3, 0, 0} ``` ```coffeescript moveZeros [false,1,0,1,2,0,1,3,\"a\"] # returns[false,1,1,2,1,3,\"a\",0,0] ``` ```csharp Kata.MoveZeroes(new int[] {1, 2, 0, 1, 0, 1, 0, 3, 0, 1}) => new int[] {1, 2, 1, 1, 3, 1, 0, 0, 0, 0} ``` ```go MoveZeros([]int{1, 2, 0, 1, 0, 1, 0, 3, 0, 1}) // returns []int{ 1, 2, 1, 1, 3, 1, 0, 0, 0, 0 } ``` ```haskell moveZeros [1,2,0,1,0,1,0,3,0,1] -> [1,2,1,1,3,1,0,0,0,0] ``` ```factor { 1 2 0 1 0 1 0 3 0 1 } move-zeros -> { 1 2 1 1 3 1 0 0 0 0 } ``` ```ruby moveZeros [1,2,0,1,0,1,0,3,0,1] #-> [1,2,1,1,3,1,0,0,0,0] ``` ```c move_zeros(10, int [] {1, 2, 0, 1, 0, 1, 0, 3, 0, 1}); // -> int [] {1, 2, 1, 1, 3, 1, 0, 0, 0, 0} ``` ```scala moveZeroes(List(1, 0, 1, 2, 0, 1, 3)) // -> List(1, 1, 2, 1, 3, 0, 0) ``` ```bf \"1012013\\0\"   -->   \"1121300\" ```"
+    },
+    "path": "solutions/5-kyu/moving-zeros-to-the-end.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/52597aa56021e91c93000cb0"
+  },
+  {
+    "id": "57eae20f5500ad98e50002c5",
+    "slug": "remove-string-spaces",
+    "level": "8 kyu",
+    "title": {
+      "en": "Remove String Spaces"
+    },
+    "description": {
+      "en": "Write a function that removes the spaces from the string, then return the resultant string. Examples (**Input -> Output**): ``` \"8 j 8   mBliB8g  imjB8B8  jl  B\" -> \"8j8mBliB8gimjB8B8jlB\" \"8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd\" -> \"88Bifk8hB8BB8BBBB888chl8BhBfd\" \"8aaaaa dddd r     \" -> \"8aaaaaddddr\" ``` The input string will be terminated with a null character `\\0`. For C and Nasm, you must return a new dynamically allocated string."
+    },
+    "path": "solutions/8-kyu/remove-string-spaces.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/57eae20f5500ad98e50002c5"
+  },
+  {
+    "id": "582cb0224e56e068d800003c",
+    "slug": "keep-hydrated-1",
+    "level": "8 kyu",
+    "title": {
+      "en": "Keep Hydrated!"
+    },
+    "description": {
+      "en": "Nathan loves cycling. Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling. You get given the time in hours and you need to return the number of litres Nathan will drink, rounded _down_. For example: ``` time = 3 ----> litres = 1 time = 6.7---> litres = 3 time = 11.8--> litres = 5 ``` ``` hours = 3 ----> liters = 1 hours = 6.7---> liters = 3 hours = 11.8--> liters = 5 ``` Input data is available from the table `cycling`, which has 2 columns: `id` and `hours`. For each row, you have to return 3 columns: `id`, `hours` and `liters` (not litres, it's a difference from the kata description)"
+    },
+    "path": "solutions/8-kyu/keep-hydrated-1.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/582cb0224e56e068d800003c"
+  },
+  {
+    "id": "57a0556c7cb1f31ab3000ad7",
+    "slug": "makeuppercase",
+    "level": "8 kyu",
+    "title": {
+      "en": "MakeUpperCase"
+    },
+    "description": {
+      "en": "Write a function which converts the input string to uppercase. For BF all inputs end with \\0, all inputs are lowercases and there is no space between. RISC-V: The function signature is ```c void to_upper_case(const char *str, char *out); ``` `str` is the input string. Write your result to `out`. You may assume it is large enough to hold the result. You do not need to return anything."
+    },
+    "path": "solutions/8-kyu/makeuppercase.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/57a0556c7cb1f31ab3000ad7"
+  },
+  {
+    "id": "5667e8f4e3f572a8f2000039",
+    "slug": "mumbling",
+    "level": "7 kyu",
+    "title": {
+      "en": "Mumbling"
+    },
+    "description": {
+      "en": "This time no story, no theory. The examples below show you how to write function `accum`: #### Examples: ``` accum(\"abcd\") -> \"A-Bb-Ccc-Dddd\" accum(\"RqaEzty\") -> \"R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy\" accum(\"cwAt\") -> \"C-Ww-Aaa-Tttt\" ``` The parameter of accum is a string which includes only letters from `a..z` and `A..Z`."
+    },
+    "path": "solutions/7-kyu/mumbling.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5667e8f4e3f572a8f2000039"
+  },
+  {
+    "id": "57ea5b0b75ae11d1e800006c",
+    "slug": "sort-array-by-string-length",
+    "level": "7 kyu",
+    "title": {
+      "en": "Sort array by string length"
+    },
+    "description": {
+      "en": "Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest. For example, if this array were passed as an argument: ```javascript [\"Telescopes\", \"Glasses\", \"Eyes\", \"Monocles\"] ``` Your function would return the following array: ```javascript [\"Eyes\", \"Glasses\", \"Monocles\", \"Telescopes\"] ``` All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length."
+    },
+    "path": "solutions/7-kyu/sort-array-by-string-length.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/57ea5b0b75ae11d1e800006c"
+  },
+  {
+    "id": "57cebe1dc6fdc20c57000ac9",
+    "slug": "shortest-word",
+    "level": "7 kyu",
+    "title": {
+      "en": "Shortest Word"
+    },
+    "description": {
+      "en": "Simple, given a string of words, return the length of the shortest word(s). String will never be empty and you do not need to account for different data types."
+    },
+    "path": "solutions/7-kyu/shortest-word.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9"
+  },
+  {
+    "id": "5264d2b162488dc400000001",
+    "slug": "stop-gninnips-my-sdrow",
+    "level": "6 kyu",
+    "title": {
+      "en": "Stop gninnipS My sdroW!"
+    },
+    "description": {
+      "en": "Write a function that takes in a string of one or more words, and returns the same string, but with all words that have five or more letters reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present. Examples: ``` \"Hey fellow warriors\"  --> \"Hey wollef sroirraw\" \"This is a test        --> \"This is a test\" \"This is another test\" --> \"This is rehtona test\" ```"
+    },
+    "path": "solutions/6-kyu/stop-gninnips-my-sdrow.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5264d2b162488dc400000001"
+  },
+  {
+    "id": "5839edaa6754d6fec10000a2",
+    "slug": "find-the-missing-letter",
+    "level": "6 kyu",
+    "title": {
+      "en": "Find the missing letter"
+    },
+    "description": {
+      "en": "# Find the missing letter Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array. In the case of factor, your array of letters will be a string. You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.<br> The array will always contain letters in only one case. Example: ``` ['a','b','c','d','f'] -> 'e' ['O','Q','R','S'] -> 'P' ``` ```factor \"abcdf\" -> CHAR: e \"OQRS\" -> CHAR: P ``` ```if:swift [\"a\",\"b\",\"c\",\"d\",\"f\"] -> \"e\" [\"O\",\"Q\",\"R\",\"S\"] -> \"P\" ``` (Use the English alphabet with 26 letters!) Have fun coding it and please don't forget to vote and rank this kata! :-) I have also created other katas. Take a look if you enjoyed this kata!"
+    },
+    "path": "solutions/6-kyu/find-the-missing-letter.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5839edaa6754d6fec10000a2"
+  },
+  {
+    "id": "513e08acc600c94f01000001",
+    "slug": "rgb-to-hex-conversion",
+    "level": "5 kyu",
+    "title": {
+      "en": "RGB To Hex Conversion"
+    },
+    "description": {
+      "en": "The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value. Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here. ### Examples (input --> output): ``` 255, 255, 255 --> \"FFFFFF\" 255, 255, 300 --> \"FFFFFF\" 0, 0, 0       --> \"000000\" 148, 0, 211   --> \"9400D3\" ```"
+    },
+    "path": "solutions/5-kyu/rgb-to-hex-conversion.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/513e08acc600c94f01000001"
+  },
+  {
+    "id": "57a0e5c372292dd76d000d7e",
+    "slug": "string-repeat",
+    "level": "8 kyu",
+    "title": {
+      "en": "String repeat"
+    },
+    "description": {
+      "en": "Write a program which accepts a single byte `n` and then a sequence of bytes `string` and outputs the `string` exactly `n` times. The first input byte will be `n`. Following bytes will be characters of `string`. The end of the input `string` will be indicated with a null byte `\\0`. ### Examples: \"\\6I\" -> \"IIIIII\" \"\\5Hello\" -> \"HelloHelloHelloHelloHello\" Write a function that accepts a non-negative integer `n` and a string `s` as parameters, and returns a string of `s` repeated exactly `n` times. ### Examples (input -> output) ``` 6, \"I\"     -> \"IIIIII\" 5, \"Hello\" -> \"HelloHelloHelloHelloHello\" ```"
+    },
+    "path": "solutions/8-kyu/string-repeat.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/57a0e5c372292dd76d000d7e"
+  },
+  {
+    "id": "57356c55867b9b7a60000bd7",
+    "slug": "basic-mathematical-operations",
+    "level": "8 kyu",
+    "title": {
+      "en": "Basic Mathematical Operations"
+    },
+    "description": {
+      "en": "Your task is to create a function that does four basic mathematical operations. The function should take three arguments - operation(string/char), value1(number), value2(number). The function should return result of numbers after applying the chosen operation. ### Examples(Operator, value1, value2) --> output ``` ('+', 4, 7) --> 11 ('-', 15, 18) --> -3 ('*', 5, 5) --> 25 ('/', 49, 7) --> 7 ``` ```nasm mov dil, '+' mov rax, __float64__(4.0) mov rdx, __float64__(7.0) movq xmm0, rax movq xmm1, rdx call basic_op        ; XMM0 <- 11.0 mov dil, '-' mov rax, __float64__(15.0) mov rdx, __float64__(18.0) movq xmm0, rax movq xmm1, rdx call basic_op        ; XMM0 <- -3.0 mov dil, '*' mov rax, __float64__(5.0) movq xmm0, rax movq xmm1, rax call basic_op        ; XMM0 <- 25.0 mov dil, '/' mov rax, __float64__(49.0) mov rdx, __float64__(7.0) movq xmm0, rax movq xmm1, rdx call basic_op        ; XMM0 <- 7.0 ```"
+    },
+    "path": "solutions/8-kyu/basic-mathematical-operations.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/57356c55867b9b7a60000bd7"
+  },
+  {
+    "id": "57eadb7ecd143f4c9c0000a3",
+    "slug": "abbreviate-a-two-word-name",
+    "level": "8 kyu",
+    "title": {
+      "en": "Abbreviate a Two Word Name"
+    },
+    "description": {
+      "en": "Write a function to convert a name into initials. This kata strictly takes two words with one space in between them. The output should be two capital letters with a dot separating them. It should look like this: `Sam Harris` => `S.H` `patrick feeney` => `P.F` RISC-V: The function signature is: ```c char *get_initials(const char *full_name, char initials[4]); ``` Write your result to `initials`, and return that buffer."
+    },
+    "path": "solutions/8-kyu/abbreviate-a-two-word-name.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3"
+  },
+  {
+    "id": "56bc28ad5bdaeb48760009b0",
+    "slug": "remove-first-and-last-character",
+    "level": "8 kyu",
+    "title": {
+      "en": "Remove First and Last Character"
+    },
+    "description": {
+      "en": "# Remove First and Last Character ## Task Your goal is to write a function that removes the first and last characters of a string. You're given one parameter, the original string. **Important:** Your function should handle strings of any `length ≥ 2` characters. For strings with exactly `2` characters, return an empty string. ## Examples ```javascript 'eloquent' --> 'loquen' 'country'  --> 'ountr' 'person'   --> 'erso' 'ab'       --> '' (empty string) 'xyz'      --> 'y' ``` ## Requirements - The input string will always have at least 2 characters - For strings with exactly 2 characters, return an empty string - For strings with 3 or more characters, remove the first and last character - The function should handle strings containing letters, numbers, and special characters ## Test Cases Your solution will be tested against: - Basic functionality with common words - Edge cases with 2-character and 3-character strings - Strings containing numbers and special characters - Random test cases of varying lengths"
+    },
+    "path": "solutions/8-kyu/remove-first-and-last-character.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0"
+  },
+  {
+    "id": "55908aad6620c066bc00002a",
+    "slug": "exes-and-ohs",
+    "level": "7 kyu",
+    "title": {
+      "en": "Exes and Ohs"
+    },
+    "description": {
+      "en": "Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char. Examples input/output: ``` XO(\"ooxx\") => true XO(\"xooxx\") => false XO(\"ooxXm\") => true XO(\"zpzpzpp\") => true // when no 'x' and 'o' is present should return true XO(\"zzoo\") => false ```"
+    },
+    "path": "solutions/7-kyu/exes-and-ohs.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/55908aad6620c066bc00002a"
+  },
+  {
+    "id": "554e4a2f232cdd87d9000038",
+    "slug": "complementary-dna",
+    "level": "7 kyu",
+    "title": {
+      "en": "Complementary DNA"
+    },
+    "description": {
+      "en": "Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the \"instructions\" for the development and functioning of living organisms. If you want to know more: http://en.wikipedia.org/wiki/DNA In DNA strings, symbols \"A\" and \"T\" are complements of each other, as \"C\" and \"G\". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell). More similar exercise are found here: http://rosalind.info/problems/list-view/ (source) Example: (**input --> output**) ``` \"ATTGC\" --> \"TAACG\" \"GTAT\" --> \"CATA\" ``` ```if:haskell dnaStrand []        `shouldBe` [] dnaStrand [A,T,G,C] `shouldBe` [T,A,C,G] dnaStrand [G,T,A,T] `shouldBe` [C,A,T,A] dnaStrand [A,A,A,A] `shouldBe` [T,T,T,T] ```"
+    },
+    "path": "solutions/7-kyu/complementary-dna.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/554e4a2f232cdd87d9000038"
+  },
+  {
+    "id": "546e2562b03326a88e000020",
+    "slug": "square-every-digit",
+    "level": "7 kyu",
+    "title": {
+      "en": "Square Every Digit"
+    },
+    "description": {
+      "en": "Welcome. In this kata, you are asked to square every digit of a number and concatenate them. For example, if we run 9119 through the function, 811181 will come out, because 9<sup>2</sup> is 81 and 1<sup>2</sup> is 1. (81-1-1-81) Example #2: An input of 765 will/should return 493625 because 7<sup>2</sup> is 49, 6<sup>2</sup> is 36, and 5<sup>2</sup> is 25. (49-36-25) **Note:** The function accepts an integer and returns an integer. Happy Coding!"
+    },
+    "path": "solutions/7-kyu/square-every-digit.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/546e2562b03326a88e000020"
+  },
+  {
+    "id": "583203e6eb35d7980400002a",
+    "slug": "count-the-smiley-faces",
+    "level": "6 kyu",
+    "title": {
+      "en": "Count the smiley faces!"
+    },
+    "description": {
+      "en": "Given an array (arr) as an argument complete the function `countSmileys` that should return the total number of smiling faces. Rules for a smiling face: - Each smiley face must contain a valid pair of eyes. Eyes can be marked as `:` or `;` - A smiley face can have a nose but it does not have to. Valid characters for a nose are `-` or `~` - Every smiling face must have a smiling mouth that should be marked with either `)` or `D` No additional characters are allowed except for those mentioned. **Valid smiley face examples:** `:) :D ;-D :~)` **Invalid smiley faces:**  `;( :> :} :]` ## Example ``` countSmileys([':)', ';(', ';}', ':-D']);       // should return 2; countSmileys([';D', ':-(', ':-)', ';~)']);     // should return 3; countSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1; ``` ## Note In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same."
+    },
+    "path": "solutions/6-kyu/count-the-smiley-faces.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/583203e6eb35d7980400002a"
+  },
+  {
+    "id": "54e6533c92449cc251001667",
+    "slug": "unique-in-order",
+    "level": "6 kyu",
+    "title": {
+      "en": "Unique In Order"
+    },
+    "description": {
+      "en": "Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements. For example: ```cpp uniqueInOrder(\"AAAABBBCCDAABBB\") == {'A', 'B', 'C', 'D', 'A', 'B'} uniqueInOrder(\"ABBCcAD\")         == {'A', 'B', 'C', 'c', 'A', 'D'} uniqueInOrder([1,2,2,3,3])       == {1,2,3} ``` ```javascript uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B'] uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D'] uniqueInOrder([1,2,2,3,3])       == [1,2,3] ``` ```typescript uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B'] uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D'] uniqueInOrder([1,2,2,3,3])       == [1,2,3] ``` ```python unique_in_order('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B'] unique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D'] unique_in_order([1, 2, 2, 3, 3])   == [1, 2, 3] unique_in_order((1, 2, 2, 3, 3))   == [1, 2, 3] ``` ```ruby unique_in_order('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B'] unique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D'] unique_in_order([1,2,2,3,3])       == [1,2,3] ``` ```haskell uniqueInOrder \"AAAABBBCCDAABBB\" == \"ABCDAB\" uniqueInOrder \"ABBCcAD\"         == \"ABCcAD\" uniqueInOrder [1,2,2,3,3]       == [1,2,3] ``` ```crystal unique_in_order(\"AAAABBBCCDAABBB\") == ['A', 'B', 'C', 'D', 'A', 'B'] unique_in_order(\"ABBCcAD\")         == ['A', 'B', 'C', 'c', 'A', 'D'] unique_in_order([1,2,2,3,3])       == [1,2,3] ``` ```scala uniqueInOrder(\"AAAABBBCCDAABBB\")   == List('A', 'B', 'C', 'D', 'A', 'B') uniqueInOrder(\"ABBCcAD\")           == List('A', 'B', 'C', 'c', 'A', 'D') uniqueInOrder(List(1, 2, 2, 3, 3)) == List(1, 2, 3) ```"
+    },
+    "path": "solutions/6-kyu/unique-in-order.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/54e6533c92449cc251001667"
+  },
+  {
+    "id": "52685f7382004e774f0001f7",
+    "slug": "human-readable-time",
+    "level": "5 kyu",
+    "title": {
+      "en": "Human Readable Time"
+    },
+    "description": {
+      "en": "Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (`HH:MM:SS`) * `HH` = hours, padded to 2 digits, range: 00 - 99 * `MM` = minutes, padded to 2 digits, range: 00 - 59 * `SS` = seconds, padded to 2 digits, range: 00 - 59 The maximum time never exceeds 359999 (`99:59:59`) You can find some examples in the test fixtures."
+    },
+    "path": "solutions/5-kyu/human-readable-time.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/52685f7382004e774f0001f7"
+  },
+  {
+    "id": "5a3fe3dde1ce0e8ed6000097",
+    "slug": "century-from-year",
+    "level": "8 kyu",
+    "title": {
+      "en": "Century From Year"
+    },
+    "description": {
+      "en": "### Introduction The first century spans from the **year 1** up to *and including* the year 100, the second century - from the year 101 up to *and including* the year 200, etc. ### Task Given a year, return the century it is in. ### Examples ``` 1705 --> 18 1900 --> 19 1601 --> 17 2000 --> 20 2742 --> 28 ``` ```if:sql In SQL, you will be given a table `years` with a column `yr` for the year. Return a table with a column `century`. ``` Note: this kata uses strict construction as shown in the description and the examples, you can read more about it [here](https://en.wikipedia.org/wiki/Century)"
+    },
+    "path": "solutions/8-kyu/century-from-year.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097"
+  },
+  {
+    "id": "55d24f55d7dd296eb9000030",
+    "slug": "grasshopper-summation",
+    "level": "8 kyu",
+    "title": {
+      "en": "Grasshopper - Summation"
+    },
+    "description": {
+      "en": "# Summation Write a program that finds the summation of every number from 1 to num (both inclusive). The number will always be a positive integer greater than 0. Your function only needs to return the result, what is shown between parentheses in the example below is how you reach that result and it's not part of it, see the sample tests. For example **(Input -> Output)**: ``` 2 -> 3 (1 + 2) 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8) ```"
+    },
+    "path": "solutions/8-kyu/grasshopper-summation.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/55d24f55d7dd296eb9000030"
+  },
+  {
+    "id": "57a2013acf1fa5bfc4000921",
+    "slug": "calculate-average",
+    "level": "8 kyu",
+    "title": {
+      "en": "Calculate average"
+    },
+    "description": {
+      "en": "Write a function which calculates the average of the numbers in a given array. **Note:** Empty arrays should return 0."
+    },
+    "path": "solutions/8-kyu/calculate-average.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/57a2013acf1fa5bfc4000921"
+  },
+  {
+    "id": "55f9b48403f6b87a7c0000bd",
+    "slug": "beginner-series-number-1-school-paperwork",
+    "level": "8 kyu",
+    "title": {
+      "en": "Beginner Series #1 School Paperwork"
+    },
+    "description": {
+      "en": "Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages. Your task is to calculate how many blank pages do you need. If `n < 0` or `m < 0` return `0`. ### Example: ``` n= 5, m=5: 25 n=-5, m=5:  0 ``` Waiting for translations and Feedback! Thanks!"
+    },
+    "path": "solutions/8-kyu/beginner-series-number-1-school-paperwork.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/55f9b48403f6b87a7c0000bd"
+  },
+  {
+    "id": "558fc85d8fd1938afb000014",
+    "slug": "sum-of-two-lowest-positive-integers",
+    "level": "7 kyu",
+    "title": {
+      "en": "Sum of two lowest positive integers"
+    },
+    "description": {
+      "en": "Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed. ```if:java For Java, those integers will come as double precision (long). ``` For example, when an array is passed like `[19, 5, 42, 2, 77]`, the output should be `7`. `[10, 343445353, 3453445, 3453545353453]` should return `3453455`."
+    },
+    "path": "solutions/7-kyu/sum-of-two-lowest-positive-integers.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/558fc85d8fd1938afb000014"
+  },
+  {
+    "id": "5259b20d6021e9e14c0010d4",
+    "slug": "reverse-words",
+    "level": "7 kyu",
+    "title": {
+      "en": "Reverse words"
+    },
+    "description": {
+      "en": "Complete the function that accepts a string parameter, and reverses each word in the string. **All** spaces in the string should be retained. ## Examples ``` \"This is an example!\" ==> \"sihT si na !elpmaxe\" \"double  spaces\"      ==> \"elbuod  secaps\" ```"
+    },
+    "path": "solutions/7-kyu/reverse-words.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5259b20d6021e9e14c0010d4"
+  },
+  {
+    "id": "559ac78160f0be07c200005a",
+    "slug": "name-shuffler",
+    "level": "8 kyu",
+    "title": {
+      "en": "Name Shuffler"
+    },
+    "description": {
+      "en": "Write a function that returns a string in which firstname is swapped with last name. **Example(Input --> Output)** ``` \"john McClane\" --> \"McClane john\" ``` RISC-V: The function signature is: ```c char *name_shuffler(char *shuffled, const char *name); ``` `name` is the input string and `shuffled` is the output buffer you should write to. You may assume the output buffer is large enough to hold the result. Return the output buffer."
+    },
+    "path": "solutions/8-kyu/name-shuffler.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/559ac78160f0be07c200005a"
+  },
+  {
+    "id": "54da539698b8a2ad76000228",
+    "slug": "take-a-ten-minutes-walk",
+    "level": "6 kyu",
+    "title": {
+      "en": "Take a Ten Minutes Walk"
+    },
+    "description": {
+      "en": "You live in the city of Cartesia where all roads are laid out in a perfect grid.  You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk.  The city provides its citizens with a Walk Generating App on their phones -- everytime you press the button it sends you an array of one-letter strings representing directions to walk (eg. ['n', 's', 'w', 'e']).  You always walk only a single block for each letter (direction) and you know it takes you one minute to traverse one city block, so create a function that will return **true** if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point.  Return **false** otherwise. > **Note**: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only).  It will never give you an empty array (that's not a walk, that's standing still!)."
+    },
+    "path": "solutions/6-kyu/take-a-ten-minutes-walk.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/54da539698b8a2ad76000228"
+  },
+  {
+    "id": "576757b1df89ecf5bd00073b",
+    "slug": "build-tower",
+    "level": "6 kyu",
+    "title": {
+      "en": "Build Tower"
+    },
+    "description": {
+      "en": "Build Tower --- Build a pyramid-shaped tower, as an array/list of strings, given a positive integer `number of floors`. A tower block is represented with `\"*\"` character. For example, a tower with `3` floors looks like this: ``` [ \"  *  \", \" *** \", \"*****\" ] ``` And a tower with `6` floors looks like this: ``` [ \"     *     \", \"    ***    \", \"   *****   \", \"  *******  \", \" ********* \", \"***********\" ] ``` ___ Go challenge [Build Tower Advanced](https://www.codewars.com/kata/57675f3dedc6f728ee000256) once you have finished this :)"
+    },
+    "path": "solutions/6-kyu/build-tower.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/576757b1df89ecf5bd00073b"
+  },
+  {
+    "id": "55c04b4cc56a697bb0000048",
+    "slug": "scramblies",
+    "level": "5 kyu",
+    "title": {
+      "en": "Scramblies"
+    },
+    "description": {
+      "en": "Complete the  function `scramble(str1, str2)` that returns `true` if a portion of ```str1``` characters can be rearranged to match ```str2```, otherwise returns ```false```. **Notes:** * Only lower case letters will be used (a-z). No punctuation or digits will be included. * Performance needs to be considered. ```if:c * Input strings s1 and s2 are null terminated. ``` ## Examples ```python scramble('rkqodlw', 'world') ==> True scramble('cedewaraaossoqqyt', 'codewars') ==> True scramble('katas', 'steak') ==> False ```"
+    },
+    "path": "solutions/5-kyu/scramblies.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/55c04b4cc56a697bb0000048"
+  },
+  {
+    "id": "56dec885c54a926dcd001095",
+    "slug": "opposite-number",
+    "level": "8 kyu",
+    "title": {
+      "en": "Opposite number"
+    },
+    "description": {
+      "en": "Very simple, given a number (integer / decimal / both depending on the language), find its opposite (additive inverse). Examples: ``` 1: -1 14: -14 -34: 34 ``` You will be given a table: `opposite`, with a column: `number`. Return a table with a column: `res`."
+    },
+    "path": "solutions/8-kyu/opposite-number.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/56dec885c54a926dcd001095"
+  },
+  {
+    "id": "523b4ff7adca849afe000035",
+    "slug": "function-1-hello-world",
+    "level": "8 kyu",
+    "title": {
+      "en": "Function 1 - hello world"
+    },
+    "description": {
+      "en": "Make a simple function called `Greet` that returns the most-famous \"hello world!\". Make a simple function called `greet` that returns the most-famous \"hello world!\". ### Style Points Sure, this is about as easy as it gets. But how clever can you be to create the most creative \"hello world\" you can think of? What is a \"hello world\" solution you would want to show your friends?"
+    },
+    "path": "solutions/8-kyu/function-1-hello-world.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/523b4ff7adca849afe000035"
+  },
+  {
+    "id": "5545f109004975ea66000086",
+    "slug": "is-n-divisible-by-x-and-y",
+    "level": "8 kyu",
+    "title": {
+      "en": "Is n divisible by x and y?"
+    },
+    "description": {
+      "en": "Create a function that checks if a number `n` is divisible by two numbers `x` **AND** `y`. All inputs are positive, non-zero numbers. ```text Examples: 1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3 2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6 3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3 4) n =  12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5 ```"
+    },
+    "path": "solutions/8-kyu/is-n-divisible-by-x-and-y.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5545f109004975ea66000086"
+  },
+  {
+    "id": "577a98a6ae28071780000989",
+    "slug": "find-maximum-and-minimum-values-of-a-list",
+    "level": "8 kyu",
+    "title": {
+      "en": "Find Maximum and Minimum Values of a List"
+    },
+    "description": {
+      "en": "Your task is to make two functions ( `max` and `min`, or `maximum` and `minimum`, etc., depending on the language ) that receive a list of integers as input, and return the largest and lowest number in that list, respectively. Each function returns one number. ### Examples (Input -> Output) ``` * [4,6,2,1,9,63,-134,566]         -> max = 566, min = -134 * [-52, 56, 30, 29, -54, 0, -110] -> min = -110, max = 56 * [42, 54, 65, 87, 0]             -> min = 0, max = 87 * [5]                             -> min = 5, max = 5 ``` ### Notes - You may consider that there will not be any empty arrays/vectors."
+    },
+    "path": "solutions/8-kyu/find-maximum-and-minimum-values-of-a-list.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/577a98a6ae28071780000989"
+  },
+  {
+    "id": "5656b6906de340bd1b0000ac",
+    "slug": "two-to-one",
+    "level": "7 kyu",
+    "title": {
+      "en": "Two to One"
+    },
+    "description": {
+      "en": "Take 2 strings `s1` and `s2` including only letters from `a` to `z`. Return a new **sorted** string (alphabetical ascending), the longest possible, containing distinct letters - each taken only once - coming from s1 or s2. #### Examples: ``` a = \"xyaabbbccccdefww\" b = \"xxxxyyyyabklmopq\" longest(a, b) -> \"abcdefklmopqwxy\" a = \"abcdefghijklmnopqrstuvwxyz\" longest(a, a) -> \"abcdefghijklmnopqrstuvwxyz\" ```"
+    },
+    "path": "solutions/7-kyu/two-to-one.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5656b6906de340bd1b0000ac"
+  },
+  {
+    "id": "51f2d1cafc9c0f745c00037d",
+    "slug": "string-ends-with",
+    "level": "7 kyu",
+    "title": {
+      "en": "String ends with?"
+    },
+    "description": {
+      "en": "Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string). Examples: ```javascript solution('abc', 'bc') // returns true solution('abc', 'd') // returns false ``` ```coffeescript solution('abc', 'bc') # returns true solution('abc', 'd') # returns false ``` ```python solution('abc', 'bc') # returns true solution('abc', 'd') # returns false ``` ```go solution(\"abc\", \"bc\") // returns true solution(\"abc\", \"d\") // returns false ``` ```prolog solution(\"abc\", \"bc\"). % match \\+ solution(\"abc\", \"d\"). % no match ``` ```clojure (solution \"abc\" \"bc\") ; returns true (solution \"abc\" \"d'\" ; returns false ``` ```lua strEndsWith('abc', 'bc') -- returns true strEndsWith('abc', 'd') -- returns false ``` ```cobol StringEndsWith('abc', 'bc') *     -->      result = 1 StringEndsWith('abc', 'd') *     -->      result = 0 ``` ```scala solution(\"abc\", \"bc\") // returns true solution(\"abc\", \"d\") //returns false ```"
+    },
+    "path": "solutions/7-kyu/string-ends-with.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d"
+  },
+  {
+    "id": "5390bac347d09b7da40006f6",
+    "slug": "jaden-casing-strings",
+    "level": "7 kyu",
+    "title": {
+      "en": "Jaden Casing Strings"
+    },
+    "description": {
+      "en": "Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for [some of his philosophy that he delivers via Twitter](https://twitter.com/jaden). When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below. Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them. Example: Not Jaden-Cased: \"How can mirrors be real if our eyes aren't real\" Jaden-Cased:     \"How Can Mirrors Be Real If Our Eyes Aren't Real\" ```if:java Note that the **Java version** expects a return value of null for an empty string or null. ``` [Link to Jaden's former Twitter account @officialjaden via archive.org](https://web.archive.org/web/20190624190255/https://twitter.com/officialjaden)"
+    },
+    "path": "solutions/7-kyu/jaden-casing-strings.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5390bac347d09b7da40006f6"
+  },
+  {
+    "id": "5266876b8f4bf2da9b000362",
+    "slug": "who-likes-it",
+    "level": "6 kyu",
+    "title": {
+      "en": "Who likes it?"
+    },
+    "description": {
+      "en": "You probably know the \"like\" system from Facebook and other pages. People can \"like\" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item. Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples: ``` []                                -->  \"no one likes this\" [\"Peter\"]                         -->  \"Peter likes this\" [\"Jacob\", \"Alex\"]                 -->  \"Jacob and Alex like this\" [\"Max\", \"John\", \"Mark\"]           -->  \"Max, John and Mark like this\" [\"Alex\", \"Jacob\", \"Mark\", \"Max\"]  -->  \"Alex, Jacob and 2 others like this\" ``` ```if:c * return must be an allocated string * do not mutate input ``` Note: For 4 or more names, the number in `\"and 2 others\"` simply increases."
+    },
+    "path": "solutions/6-kyu/who-likes-it.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/5266876b8f4bf2da9b000362"
+  },
+  {
+    "id": "523f5d21c841566fde000009",
+    "slug": "array-dot-diff",
+    "level": "6 kyu",
+    "title": {
+      "en": "Array.diff"
+    },
+    "description": {
+      "en": "Implement a function that computes the difference between two lists. The function should remove all occurrences of elements from the first list (`a`) that are present in the second list (`b`). The order of elements in the first list should be preserved in the result. ## Examples If `a = [1, 2]` and `b = [1]`, the result should be `[2]`. If `a = [1, 2, 2, 2, 3]` and `b = [2]`, the result should be `[1, 3]`. ## NOTE: In C, assign return array length to pointer `*z`"
+    },
+    "path": "solutions/6-kyu/array-dot-diff.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/523f5d21c841566fde000009"
+  },
+  {
+    "id": "52449b062fb80683ec000024",
+    "slug": "the-hashtag-generator",
+    "level": "5 kyu",
+    "title": {
+      "en": "The Hashtag Generator"
+    },
+    "description": {
+      "en": "The marketing team is spending way too much time typing in hashtags. Let's help them with our own Hashtag Generator! Here's the deal: - It must start with a hashtag (`#`). - All words must have their first letter capitalized. - If the final result is longer than 140 chars it must return `false`. - If the input or the result is an empty string it must return `false`. ## Examples ``` \" Hello there thanks for trying my Kata\"  =>  \"#HelloThereThanksForTryingMyKata\" \"    Hello     World   \"                  =>  \"#HelloWorld\" \"\"                                        =>  false ```"
+    },
+    "path": "solutions/5-kyu/the-hashtag-generator.js",
+    "date": "2025-07-28",
+    "link": "https://www.codewars.com/kata/52449b062fb80683ec000024"
   }
 ]
