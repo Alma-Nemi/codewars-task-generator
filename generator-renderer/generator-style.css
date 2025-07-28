@@ -68,6 +68,7 @@ textarea:focus {
 
 textarea {
   height: 90px;
+  resize: both;
 }
 
 .buttons-container {
