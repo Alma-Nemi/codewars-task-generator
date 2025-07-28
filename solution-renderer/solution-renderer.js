@@ -1,7 +1,19 @@
+// Function for switching the visibility of the description
+function toggleDescription() {
+	const content = document.getElementById('solutionHeader');
+	content.classList.toggle('expanded');
+}
+
 window.addEventListener('DOMContentLoaded', () => {
-	const headerEl = document.getElementById('solution-header');
+	const headerEl = document.getElementById('solutionHeader');
 	const codeEl = document.getElementById('solution-code');
 
+	// When clicking on the description - switch its view
+	headerEl.addEventListener('click', () => {
+		toggleDescription();
+	});
+
+	// Loading the solution
 	window.electronAPI.onSolutionPath(async (filePath) => {
 		if (!filePath) {
 			headerEl.textContent = 'File not found.';
@@ -15,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 			const text = await response.text();
 
-			// Make a comment from the start of the file
+			// Eliminating the headline from the commentary
 			const headerMatch = text.match(/^\/\*([\s\S]*?)\*\//);
 			if (headerMatch) {
 				let rawHeader = headerMatch[1];
@@ -28,15 +40,21 @@ window.addEventListener('DOMContentLoaded', () => {
 					.filter(line => line.length > 0)
 					.map(line => line.replace(/^\* ?/, '').trim());
 
-				// Используем innerHTML с <br> для переноса строк
 				headerEl.innerHTML = cleanedLines.join('<br>');
+
+				// If the description is long, turn it automatically
+				const descriptionText = cleanedLines.join(' ');
+				if (descriptionText.length > 350) {
+					setTimeout(() => {
+						toggleDescription();
+					}, 100);
+				}
 			} else {
 				headerEl.textContent = 'No header comment found.';
 			}
 
-			// Remove the hat from the code
+			// Код без заголовка
 			const codeWithoutHeader = text.replace(/^\/\*[\s\S]*?\*\//, '').trim();
-
 			codeEl.textContent = codeWithoutHeader;
 
 		} catch (err) {
@@ -47,7 +65,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 
 	// Management buttons
-
 	document.getElementById('exitBtn').addEventListener('click', () => {
 		window.electronAPI.exitApp();
 	});

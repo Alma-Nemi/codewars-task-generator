@@ -48,12 +48,11 @@ async function loadArchive() {
 		table.innerHTML = `
 			<thead>
 				<tr>
-					<th>ID</th>
-					<th>Title</th>
-					<th>Level</th>
-					<th>Description</th>
+					<th class="center-col">ID</th>
+					<th class="center-col">Title</th>
+					<th class="center-col">Level</th>
 					<th class="center-col">Solution</th>
-					<th>Date</th>
+					<th class="center-col">Date</th>
 					<th class="center-col">Link</th>
 				</tr>
 			</thead>
@@ -62,12 +61,11 @@ async function loadArchive() {
 					<tr>
 						<td>${item.id}</td>
 						<td>${item.title.en}</td>
-						<td>${item.level} (${levelCounts[item.level]})</td>
-						<td>${item.description.en.length > 25 ? item.description.en.slice(0, 25) + '...' : item.description.en}</td>
+						<td class="center-col">${item.level} (${levelCounts[item.level]})</td>
 						<td class="center-col">
 							<a href="#" title="${item.path}" onclick="window.electronAPI.openSolution('${item.path.replace(/\\/g, '\\\\')}')">🗂️</a>
 						</td>
-						<td>${item.date}</td>
+						<td class="center-col">${item.date}</td>
 						<td class="center-col"><a href="${item.link}" target="_blank">🔗</a></td>
 					</tr>
 				`).join('')}
