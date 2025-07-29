@@ -7,6 +7,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
   closeWindow: () => ipcRenderer.send('close-archive-window'),
   openSolution: (filePath) => ipcRenderer.send('open-solution', filePath),
   onSolutionPath: (callback) => ipcRenderer.on('solution-path', (event, path) => callback(path)),
+  saveSolutionContent: (filePath, codeOnly) => ipcRenderer.send('save-solution-content', { filePath, codeOnly }),
+
   loadArchiveMeta: () => ipcRenderer.invoke('load-archive-meta')
 });
 

@@ -8,20 +8,26 @@
 <body>
 <header>
 	<h1>🧠 Your solution</h1>
-	<div class="subtitle">View your Codewars solution</div>
+	<div class="subtitle">View and edit your Codewars solution</div>
 	<div class="button-container">
 		<button id="backToArchiveBtn">⬅️ Back to Archive</button>
+		<button id="saveSolutionBtn">💾 Save Changes</button>
 		<button id="exitBtn">✖️ Exit</button>
 	</div>
 	<div class="description-container">
-		<div class="description-content collapsible" id="solutionHeader">
-			Loading description...
+		<div class="description-wrapper">
+			<div class="description-content" id="solutionHeader">
+				Loading description...
+			</div>
+			<div id="descriptionToggle" class="description-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="solutionHeader">
+				Expand ▼
+			</div>
 		</div>
 	</div>
 </header>
 
 <main>
-	<pre id="solution-code" class="matrix-code">Loading solution...</pre>
+	<textarea id="solution-code" class="matrix-code">Loading solution...</textarea>
 </main>
 
 <footer>

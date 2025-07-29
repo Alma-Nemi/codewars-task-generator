@@ -26,16 +26,16 @@ function sanitizeTitle(title) {
 
 // --- Clean markdown from description ---
 function cleanDescription(desc) {
-	const lines = desc.split('\n');
-	let cleanedLines = [];
-
-	for (let line of lines) {
-		line = line.trim();
-		if (line.startsWith('~~~')) continue;
-		if (line.length > 0) cleanedLines.push(line);
-	}
-
-	return cleanedLines.join(' ');
+	return desc
+		.replace(/```([\s\S]*?)```/g, (_, code) => {
+			const escaped = code.trim().replace(/</g, '&lt;').replace(/>/g, '&gt;');
+			return `<pre><code>${escaped}</code></pre>`;
+		})
+		.replace(/`([^`\n]+?)`/g, (_, code) => `<code>${code}</code>`)
+		.split('\n')
+		.map(line => line.trim())
+		.filter(line => line.length > 0)
+		.join(' ');
 }
 
 async function fetchKataInfo(id) {

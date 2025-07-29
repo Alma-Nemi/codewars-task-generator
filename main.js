@@ -1,5 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+const fs = require('fs');
 const generateTask = require('./scripts/generate-task');
 
 // Data storage path
@@ -25,7 +26,7 @@ function createArchiveWindow() {
     width: 900,
     height: 750,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'), // если будет использоваться
+      preload: path.join(__dirname, 'preload.js'), // If it is used
       contextIsolation: true,
       nodeIntegration: false
     }
@@ -64,7 +65,6 @@ ipcMain.handle('open-archive', () => {
 });
 
 // Back to Generator handler
-
 ipcMain.on('close-archive-window', (event) => {
   const win = BrowserWindow.fromWebContents(event.sender);
   if (win) win.close();
@@ -76,7 +76,6 @@ ipcMain.on('app-exit', () => {
 });
 
 // Open solution handler
-
 ipcMain.on('open-solution', (event, relativeFilePath) => {
   const win = new BrowserWindow({
     width: 900,
@@ -98,4 +97,18 @@ ipcMain.on('open-solution', (event, relativeFilePath) => {
   win.webContents.once('did-finish-load', () => {
     win.webContents.send('solution-path', absolutePath);
   });
+
+  ipcMain.on('save-solution-content', (event, { filePath, codeOnly }) => {
+    try {
+      const original = fs.readFileSync(filePath, 'utf-8');
+      const headerMatch = original.match(/^\/\*[\s\S]*?\*\//);
+      const header = headerMatch ? headerMatch[0] : '';
+      const updated = `${header}\n\n${codeOnly.trim()}`;
+      fs.writeFileSync(filePath, updated, 'utf-8');
+      console.log('[SUCCESS]: Solution saved:', filePath);
+    } catch (err) {
+      console.error('[ERROR]: Failed to save solution:', err);
+    }
+  });
+
 });

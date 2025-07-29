@@ -1,20 +1,13 @@
-// Function for switching the visibility of the description
-function toggleDescription() {
-	const content = document.getElementById('solutionHeader');
-	content.classList.toggle('expanded');
-}
-
 window.addEventListener('DOMContentLoaded', () => {
 	const headerEl = document.getElementById('solutionHeader');
 	const codeEl = document.getElementById('solution-code');
+	const descriptionContent = document.getElementById('solutionHeader');
 
-	// When clicking on the description - switch its view
-	headerEl.addEventListener('click', () => {
-		toggleDescription();
-	});
+	let currentSolutionPath = null;
 
 	// Loading the solution
 	window.electronAPI.onSolutionPath(async (filePath) => {
+		currentSolutionPath = filePath;
 		if (!filePath) {
 			headerEl.textContent = 'File not found.';
 			codeEl.textContent = '';
@@ -41,19 +34,11 @@ window.addEventListener('DOMContentLoaded', () => {
 					.map(line => line.replace(/^\* ?/, '').trim());
 
 				headerEl.innerHTML = cleanedLines.join('<br>');
-
-				// If the description is long, turn it automatically
-				const descriptionText = cleanedLines.join(' ');
-				if (descriptionText.length > 350) {
-					setTimeout(() => {
-						toggleDescription();
-					}, 100);
-				}
 			} else {
 				headerEl.textContent = 'No header comment found.';
 			}
 
-			// Код без заголовка
+			// Code without a title
 			const codeWithoutHeader = text.replace(/^\/\*[\s\S]*?\*\//, '').trim();
 			codeEl.textContent = codeWithoutHeader;
 
@@ -64,6 +49,22 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
+	function updateToggleText() {
+		const expanded = descriptionContent.classList.contains('expanded');
+		descriptionToggle.textContent = expanded ? 'Collapse ▲' : 'Expand ▼';
+		descriptionToggle.setAttribute('aria-expanded', expanded.toString());
+	}
+
+	descriptionToggle.addEventListener('click', () => {
+		descriptionContent.classList.toggle('expanded');
+		updateToggleText();
+	});
+
+	descriptionContent.addEventListener('click', () => {
+		descriptionContent.classList.toggle('expanded');
+		updateToggleText();
+	});
+
 	// Management buttons
 	document.getElementById('exitBtn').addEventListener('click', () => {
 		window.electronAPI.exitApp();
@@ -71,5 +72,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	document.getElementById('backToArchiveBtn').addEventListener('click', () => {
 		window.electronAPI.closeWindow();
+	});
+
+	document.getElementById('saveSolutionBtn').addEventListener('click', () => {
+		const codeOnly = document.getElementById('solution-code').value;
+		if (currentSolutionPath) {
+			window.electronAPI.saveSolutionContent(currentSolutionPath, codeOnly);
+		}
 	});
 });

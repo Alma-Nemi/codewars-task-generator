@@ -12,6 +12,7 @@ Organize your progress effortlessly — with a hint of magic. 💫
 - 🧾 Stores metadata in `solutions.json`
 - 🎨 Simple, intuitive GUI with smooth animations
 - 📊 Interactive archive with collapsible task list and total solution count
+- 💾 Built-in Save Button – update and persist solution changes directly from the preview window
 
 ## 🗃️ Solutions Archive
 
@@ -22,6 +23,7 @@ Create a visual archive of your saved Codewars solutions:
 - 🏷️ Shows title, rank, direct link, and task description
 - 🔍 Allows interactive browsing and filtering by level
 - 🖥️ Opens solution code in a custom-styled preview window
+- ✍️ Edit and Save – modify solution code and save changes in-place with a single click
 
 ## 🛠️ Tech Stack
 
