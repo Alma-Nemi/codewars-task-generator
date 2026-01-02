@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Solving the task</title>
+	<link rel="stylesheet" href="solution-style.css" />
+</head>
+<body>
+<header>
+	<h1>🧠 Your solution</h1>
+	<div class="subtitle">✨ View and edit your Codewars solution ✨</div>
+	<div class="button-container">
+		<button id="backToArchiveBtn">⬅️ Archive</button>
+		<button id="saveSolutionBtn">💾 Save Changes</button>
+		<button id="toGeneratorBtn">Generator ➡️</button>
+	</div>
+	<div class="description-container">
+		<div class="description-wrapper">
+			<div class="description-content" id="solutionHeader">
+				Loading description...
+			</div>
+			<div id="descriptionToggle" class="description-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="solutionHeader">
+				Expand ▼
+			</div>
+		</div>
+	</div>
+</header>
+
+<main>
+	<textarea id="solution-code" class="matrix-code">Loading solution...</textarea>
+</main>
+
+<footer>
+	by Witch of Code <span class="magic">🪄</span>
+</footer>
+
+<script src="solution-renderer.js"></script>
+</body>
+</html>
